@@ -32,7 +32,9 @@ public class ATMRoom {
     private User createUser(){
 
         User user = new User();
-        user.setCard(createCard());
+        Card card = createCard();
+        user.setCard(card);
+        user.setBankAccount(card.getBankAccount());
         return user;
     }
 

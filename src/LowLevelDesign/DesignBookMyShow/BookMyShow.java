@@ -57,11 +57,13 @@ public class BookMyShow {
         //5. select the seat
         int seatNumber = 30;
         List<Integer> bookedSeats = interestedShow.getBookedSeatIds();
+
         if(!bookedSeats.contains(seatNumber)){
             bookedSeats.add(seatNumber);
             //startPayment
             Booking booking = new Booking();
             List<Seat> myBookedSeats = new ArrayList<>();
+
             for(Seat screenSeat : interestedShow.getScreen().getSeats()) {
                 if(screenSeat.getSeatId() == seatNumber) {
                     myBookedSeats.add(screenSeat);
@@ -94,12 +96,16 @@ public class BookMyShow {
         Movie baahubali = movieController.getMovieByName("BAAHUBALI");
 
         Theatre inoxTheatre = new Theatre();
+
         inoxTheatre.setTheatreId(1);
         inoxTheatre.setScreen(createScreen());
         inoxTheatre.setCity(City.Bangalore);
+
         List<Show> inoxShows = new ArrayList<>();
+
         Show inoxMorningShow = createShows(1, inoxTheatre.getScreen().get(0), avengerMovie, 8);
         Show inoxEveningShow = createShows(2, inoxTheatre.getScreen().get(0), baahubali, 16);
+
         inoxShows.add(inoxMorningShow);
         inoxShows.add(inoxEveningShow);
         inoxTheatre.setShows(inoxShows);
@@ -109,9 +115,12 @@ public class BookMyShow {
         pvrTheatre.setTheatreId(2);
         pvrTheatre.setScreen(createScreen());
         pvrTheatre.setCity(City.Delhi);
+
         List<Show> pvrShows = new ArrayList<>();
+
         Show pvrMorningShow = createShows(3, pvrTheatre.getScreen().get(0), avengerMovie, 13);
         Show pvrEveningShow = createShows(4, pvrTheatre.getScreen().get(0), baahubali, 20);
+
         pvrShows.add(pvrMorningShow);
         pvrShows.add(pvrEveningShow);
         pvrTheatre.setShows(pvrShows);

@@ -4,11 +4,12 @@ import LowLevelDesign.DesignVendingMachine.Coin;
 import LowLevelDesign.DesignVendingMachine.Item;
 import LowLevelDesign.DesignVendingMachine.VendingMachine;
 import LowLevelDesign.DesignVendingMachine.VendingStates.State;
+import LowLevelDesign.DesignVendingMachine.VendingStates.Refund_Money;
 
 import java.util.List;
 
 
-public class SelectionState implements State {
+public class SelectionState extends Refund_Money implements State {
 
     public SelectionState(){
         System.out.println("Currently Vending machine is in SelectionState");
@@ -65,9 +66,10 @@ public class SelectionState implements State {
 
     @Override
     public List<Coin> refundFullMoney(VendingMachine machine) throws Exception{
-        System.out.println("Returned the full amount back in the Coin Dispense Tray");
-        machine.setVendingMachineState(new IdleState(machine));
-        return machine.getCoinList();
+//        System.out.println("Returned the full amount back in the Coin Dispense Tray");
+//        machine.setVendingMachineState(new IdleState(machine));
+//        return machine.getCoinList();
+        return refundFull(machine);
     }
 
     @Override

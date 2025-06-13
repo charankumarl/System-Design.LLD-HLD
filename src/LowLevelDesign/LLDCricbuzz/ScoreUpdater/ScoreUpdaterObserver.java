@@ -1,6 +1,7 @@
 package LowLevelDesign.LLDCricbuzz.ScoreUpdater;
 
-import LowLevelDesign.LLDCricBuzz.Match.Inning.BallDetails;
+
+import LowLevelDesign.LLDCricbuzz.Inning.BallDetails;
 
 public interface ScoreUpdaterObserver {
 

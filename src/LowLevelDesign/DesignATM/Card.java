@@ -28,4 +28,8 @@ public class Card {
     public void setBankAccount(UserBankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
+
+    public UserBankAccount getBankAccount(){
+        return bankAccount;
+    }
 }

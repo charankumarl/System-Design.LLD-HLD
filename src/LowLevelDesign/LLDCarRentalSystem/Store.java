@@ -13,15 +13,12 @@ public class Store {
     Location storeLocation;
     List<Reservation> reservations = new ArrayList<>();
 
-
     public List<Vehicle> getVehicles(VehicleType vehicleType) {
 
         return inventoryManagement.getVehicles();
     }
 
-
     //addVehicles, update vehicles, use inventory management to update those.
-
 
     public void setVehicles(List<Vehicle> vehicles) {
         inventoryManagement = new VehicleInventoryManagement(vehicles);

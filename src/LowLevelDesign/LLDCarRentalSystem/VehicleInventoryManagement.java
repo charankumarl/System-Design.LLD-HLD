@@ -13,7 +13,7 @@ public class VehicleInventoryManagement {
     }
 
     public List<Vehicle> getVehicles() {
-        //filtering
+        //filtering based on condition, status etc. We can also use map to store the vehicles
         return vehicles;
     }
 

@@ -14,6 +14,5 @@ public class DebugLogProcessor extends LogProcessor{
 
             super.log(logLevel, message);
         }
-
     }
 }

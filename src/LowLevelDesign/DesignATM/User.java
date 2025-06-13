@@ -12,4 +12,11 @@ public class User {
     public void setCard(Card card) {
         this.card = card;
     }
+
+    public UserBankAccount getBankAccount() {
+        return bankAccount;
+    }
+    public void setBankAccount(UserBankAccount bankAccount) {
+        this.bankAccount = bankAccount;
+    }
 }
